@@ -3,19 +3,19 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "10f2db21",
+   "id": "e3b853ba",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-01-04T12:58:48.576880Z",
-     "iopub.status.busy": "2026-01-04T12:58:48.576535Z",
-     "iopub.status.idle": "2026-01-04T13:19:34.804662Z",
-     "shell.execute_reply": "2026-01-04T13:19:34.803490Z"
+     "iopub.execute_input": "2026-01-04T16:21:58.191559Z",
+     "iopub.status.busy": "2026-01-04T16:21:58.191133Z",
+     "iopub.status.idle": "2026-01-04T16:42:20.478752Z",
+     "shell.execute_reply": "2026-01-04T16:42:20.477286Z"
     },
     "papermill": {
-     "duration": 1246.240995,
-     "end_time": "2026-01-04T13:19:34.809568",
+     "duration": 1222.301672,
+     "end_time": "2026-01-04T16:42:20.485499",
      "exception": false,
-     "start_time": "2026-01-04T12:58:48.568573",
+     "start_time": "2026-01-04T16:21:58.183827",
      "status": "completed"
     },
     "tags": []
@@ -25,8 +25,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "OUT_DIR: /kaggle/working/3w_prepared_v3_1_fixed_timewin_zlast_hybridImputer\n",
-      "CACHE_PATH: /kaggle/working/3w_prepared_v3_1_fixed_timewin_zlast_hybridImputer/df_ml_well_v3_1_fixed_timewin_zlast_hybridImputer.parquet\n",
+      "OUT_DIR: /kaggle/working/3w_prepared_v3_1_fixed_timewin_zlast_hybridImputer_prob0\n",
+      "CACHE_PATH: /kaggle/working/3w_prepared_v3_1_fixed_timewin_zlast_hybridImputer_prob0/df_ml_well_v3_1_fixed_timewin_zlast_hybridImputer_prob0.parquet\n",
       "Total files: 2228 | WELL files: 1119 | Wells: 40\n",
       "Class counts:\n",
       " event_type_code\n",
@@ -46,7 +46,7 @@
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "d477d70aec274c76805009b9e7878336",
+       "model_id": "d0125ac6fb7e4e7885e8f2098b79bdb8",
        "version_major": 2,
        "version_minor": 0
       },
@@ -92,11 +92,11 @@
       "Using StratifiedGroupKFold with n_splits=4\n",
       "\n",
       "=== CV on TRAIN ONLY ===\n",
-      "LogReg CV: {'macro_f1_mean': 0.2480699192254695, 'macro_f1_std': 0.11211145249103659, 'major_macro_f1_mean': 0.34582027055795184, 'fault_vs_normal_f1_mean': 0.6572586102781942, 'per_class_f1_mean': {'0': 0.02054794520547945, '1': 0.0, '2': 0.5986581920903955, '3': 0.0, '4': 0.35916489738145785, '5': 0.0, '6': 0.0, '7': 0.4297297297297298, '8': 0.3333333333333333, '9': 0.7392650945142991}}\n",
+      "LogReg CV: {'macro_f1_mean': 0.2381712120732474, 'macro_f1_std': 0.1049700464839706, 'major_macro_f1_mean': 0.3466105934245418, 'fault_vs_normal_f1_mean': 0.6523473198394537, 'per_class_f1_mean': {'0': 0.022547945205479453, '1': 0.0, '2': 0.598748785228377, '3': 0.0, '4': 0.35916489738145785, '5': 0.0, '6': 0.0, '7': 0.4297297297297298, '8': 0.25, '9': 0.7215207631874299}}\n",
       "HGB   CV: {'macro_f1_mean': 0.414913949489049, 'macro_f1_std': 0.04739455413528661, 'major_macro_f1_mean': 0.6226991965158268, 'fault_vs_normal_f1_mean': 0.9249655129770701, 'per_class_f1_mean': {'0': 0.6873414934167565, '1': 0.08333333333333333, '2': 0.9074074074074073, '3': 0.0, '4': 0.8526504132709201, '5': 0.0, '6': 0.0, '7': 0.33461538461538465, '8': 0.5416666666666666, '9': 0.7421247961800218}}\n",
       "\n",
       "=== FINAL HOLDOUT (train wells -> holdout wells) ===\n",
-      "LogReg Holdout: {'macro_f1': 0.24770784770784773, 'major_macro_f1': 0.37865364609550656, 'fault_vs_normal_f1': 0.375}\n",
+      "LogReg Holdout: {'macro_f1': 0.24583333333333335, 'major_macro_f1': 0.34956880389951256, 'fault_vs_normal_f1': 0.3563218390804598}\n",
       "HGB   Holdout: {'macro_f1': 0.46379380829345, 'major_macro_f1': 0.5952119027113056, 'fault_vs_normal_f1': 0.9606299212598425}\n",
       "\n",
       "LogReg classification report (holdout):\n",
@@ -106,16 +106,16 @@
       "           1       0.00      0.00      0.00         0\n",
       "           2       1.00      1.00      1.00         1\n",
       "           3       0.00      0.00      0.00         0\n",
-      "           4       0.11      0.26      0.15        38\n",
+      "           4       0.09      0.21      0.12        38\n",
       "           5       0.00      0.00      0.00         4\n",
       "           6       0.00      0.00      0.00         0\n",
-      "           7       1.00      0.38      0.55         8\n",
-      "           8       0.67      0.33      0.44         6\n",
+      "           7       1.00      0.25      0.40         8\n",
+      "           8       0.75      0.50      0.60         6\n",
       "           9       0.25      0.50      0.33         4\n",
       "\n",
-      "    accuracy                           0.13       143\n",
-      "   macro avg       0.30      0.25      0.25       143\n",
-      "weighted avg       0.13      0.13      0.11       143\n",
+      "    accuracy                           0.11       143\n",
+      "   macro avg       0.31      0.25      0.25       143\n",
+      "weighted avg       0.13      0.11      0.10       143\n",
       "\n",
       "\n",
       "HGB classification report (holdout):\n",
@@ -138,10 +138,10 @@
       "\n",
       "\n",
       "=== Repeated Group Holdout (30 splits) ===\n",
-      "LogReg: {'macro_f1_mean': 0.1998072491629742, 'macro_f1_std': 0.07904093244227857, 'major_macro_f1_mean': 0.25770697910259127, 'fault_vs_normal_f1_mean': 0.6055958340852101, 'fault_vs_normal_f1_std': 0.24127830241058731}\n",
+      "LogReg: {'macro_f1_mean': 0.19743881681147693, 'macro_f1_std': 0.08367822648573553, 'major_macro_f1_mean': 0.24962551468683528, 'fault_vs_normal_f1_mean': 0.6082562841391405, 'fault_vs_normal_f1_std': 0.24295942464154166}\n",
       "HGB   : {'macro_f1_mean': 0.38878672931629693, 'macro_f1_std': 0.1110308237109982, 'major_macro_f1_mean': 0.48737787121416637, 'fault_vs_normal_f1_mean': 0.8875212104777906, 'fault_vs_normal_f1_std': 0.13754766056670029}\n",
       "\n",
-      "Saved: /kaggle/working/3w_prepared_v3_1_fixed_timewin_zlast_hybridImputer/results_summary.json\n"
+      "Saved: /kaggle/working/3w_prepared_v3_1_fixed_timewin_zlast_hybridImputer_prob0/results_summary.json\n"
      ]
     }
    ],
@@ -159,7 +159,11 @@
     "# - Time-window first/last; z_last uses last valid\n",
     "# - Repeated group holdout (mean/std)\n",
     "# - Cache versioning to avoid stale-feature mistakes\n",
-    "# - Hybrid imputation: median for continuous, -1 for state-ish (+ missing indicators)\n",
+    "# - Hybrid imputation:\n",
+    "#     * median for continuous\n",
+    "#     * -1 for state-ish \"level/last/transition\" features\n",
+    "#     * 0 for probability features (__p_state_*)\n",
+    "#     * + missing indicators for ALL columns\n",
     "# ============================================================\n",
     "\n",
     "import os, json\n",
@@ -183,7 +187,7 @@
     "RANDOM_STATE = 42\n",
     "N_WELL_FILES = None  # None = all WELL files\n",
     "\n",
-    "FEATURES_VERSION = \"v3_1_fixed_timewin_zlast_hybridImputer\"\n",
+    "FEATURES_VERSION = \"v3_1_fixed_timewin_zlast_hybridImputer_prob0\"\n",
     "OUT_DIR = f\"/kaggle/working/3w_prepared_{FEATURES_VERSION}\"\n",
     "os.makedirs(OUT_DIR, exist_ok=True)\n",
     "\n",
@@ -328,14 +332,12 @@
     "                first_mask = np.asarray(idx <= t_first_end, dtype=bool)\n",
     "                last_mask  = np.asarray(idx >= t_last_start, dtype=bool)\n",
     "\n",
-    "                # fallback if empty due to duplicate/irregular timestamps\n",
     "                if first_mask.sum() == 0:\n",
     "                    first_mask = np.zeros(n, dtype=bool); first_mask[:k] = True\n",
     "                if last_mask.sum() == 0:\n",
     "                    last_mask = np.zeros(n, dtype=bool); last_mask[-k:] = True\n",
     "                return first_mask, last_mask\n",
     "\n",
-    "        # row fallback\n",
     "        first_mask = np.zeros(n, dtype=bool); first_mask[:k] = True\n",
     "        last_mask  = np.zeros(n, dtype=bool); last_mask[-k:] = True\n",
     "        return first_mask, last_mask\n",
@@ -368,7 +370,6 @@
     "            out[f\"{col}__z_min\"]  = agg.loc[col, \"min\"]\n",
     "            out[f\"{col}__z_max\"]  = agg.loc[col, \"max\"]\n",
     "\n",
-    "            # last VALID z (not last row)\n",
     "            s_z = z[col].dropna()\n",
     "            out[f\"{col}__z_last\"] = s_z.iloc[-1] if len(s_z) else np.nan\n",
     "\n",
@@ -445,7 +446,7 @@
     "        \"notes\": \"continuous: raw median/iqr/last + robust-z stats + deltas; \"\n",
     "                 \"state: last + transitions + proportions (+other); WELL-only; \"\n",
     "                 \"fixes: time-window first/last + z_last last-valid; \"\n",
-    "                 \"imputer: hybrid median/-1 + missing indicators; \"\n",
+    "                 \"imputer: hybrid median/-1 with prob->0 + missing indicators; \"\n",
     "                 \"cache versioned to avoid staleness\"\n",
     "    }, f, indent=2)\n",
     "\n",
@@ -489,14 +490,13 @@
     "        return X[self.keep_columns_]\n",
     "\n",
     "# ============================================================\n",
-    "# 7) Hybrid imputer: median for continuous, -1 for state-ish (+ indicators)\n",
+    "# 7) Hybrid imputer (improves state-prob features):\n",
+    "#    - median for continuous\n",
+    "#    - -1 for state-ish \"level/last/transition\" features\n",
+    "#    - 0.0 for probability features (__p_state_*, __p_state_other)\n",
+    "#    - + missing indicators for all columns\n",
     "# ============================================================\n",
     "class HybridImputer(BaseEstimator, TransformerMixin):\n",
-    "    \"\"\"\n",
-    "    - Median imputation for most features (continuous sensors)\n",
-    "    - Constant -1 imputation for state-ish features (names containing state_token)\n",
-    "    - Adds missing indicators for all kept columns\n",
-    "    \"\"\"\n",
     "    def __init__(self, state_token: str = \"_state\", fill_value_state: float = -1.0):\n",
     "        self.state_token = state_token\n",
     "        self.fill_value_state = fill_value_state\n",
@@ -504,10 +504,23 @@
     "    def fit(self, X, y=None):\n",
     "        X = X.copy()\n",
     "        self.cols_ = list(X.columns)\n",
-    "        self.state_cols_ = [c for c in self.cols_ if self.state_token in c]\n",
-    "        self.cont_cols_ = [c for c in self.cols_ if c not in self.state_cols_]\n",
-    "        # numeric-only median is fine; if some cols are all-NaN, median becomes NaN and will be handled in transform\n",
-    "        self.cont_medians_ = X[self.cont_cols_].median(numeric_only=True) if len(self.cont_cols_) else pd.Series(dtype=float)\n",
+    "\n",
+    "        # any feature derived from a state sensor has \"_state\" somewhere in its name\n",
+    "        state_like = [c for c in self.cols_ if self.state_token in c]\n",
+    "\n",
+    "        # probabilities should live in [0, 1] -> impute missing with 0.0\n",
+    "        self.prob_cols_ = [c for c in self.cols_ if (\"__p_state_\" in c) or c.endswith(\"__p_state_other\")]\n",
+    "\n",
+    "        # remaining state-like features (e.g., __last, transitions) -> impute with -1\n",
+    "        self.state_cols_ = [c for c in state_like if c not in self.prob_cols_]\n",
+    "\n",
+    "        # everything else treated as continuous-ish -> median\n",
+    "        self.cont_cols_ = [c for c in self.cols_ if (c not in state_like)]\n",
+    "\n",
+    "        self.cont_medians_ = (\n",
+    "            X[self.cont_cols_].median(numeric_only=True)\n",
+    "            if len(self.cont_cols_) else pd.Series(dtype=float)\n",
+    "        )\n",
     "        return self\n",
     "\n",
     "    def transform(self, X):\n",
@@ -522,21 +535,23 @@
     "        miss = X.isna().astype(np.int8)\n",
     "        miss.columns = [f\"{c}__isna\" for c in miss.columns]\n",
     "\n",
-    "        # Impute continuous with medians\n",
+    "        # Continuous: median then fallback to 0.0 if median was NaN\n",
     "        if len(self.cont_cols_):\n",
-    "            # fillna with Series aligns by column name\n",
     "            X[self.cont_cols_] = X[self.cont_cols_].fillna(self.cont_medians_)\n",
-    "            # any remaining NaNs (e.g., median was NaN) -> 0\n",
     "            X[self.cont_cols_] = X[self.cont_cols_].fillna(0.0)\n",
     "\n",
-    "        # Impute state-ish with -1\n",
+    "        # Probabilities: fill missing with 0.0 (and indicator carries \"was missing\")\n",
+    "        if len(self.prob_cols_):\n",
+    "            X[self.prob_cols_] = X[self.prob_cols_].fillna(0.0)\n",
+    "\n",
+    "        # State-level / transition features: fill missing with -1 sentinel\n",
     "        if len(self.state_cols_):\n",
     "            X[self.state_cols_] = X[self.state_cols_].fillna(self.fill_value_state)\n",
     "\n",
     "        return pd.concat([X, miss], axis=1)\n",
     "\n",
     "# ============================================================\n",
-    "# 8) Weighted HGB estimator (cloneable)\n",
+    "# 8) Weighted HGB estimator (cloneable) + predict_proba (optional polish)\n",
     "# ============================================================\n",
     "class WeightedHGBClassifier(BaseEstimator, ClassifierMixin):\n",
     "    def __init__(\n",
@@ -581,6 +596,9 @@
     "    def predict(self, X):\n",
     "        return self.clf_.predict(X)\n",
     "\n",
+    "    def predict_proba(self, X):\n",
+    "        return self.clf_.predict_proba(X)\n",
+    "\n",
     "# ============================================================\n",
     "# 9) Evaluation helpers\n",
     "# ============================================================\n",
@@ -612,7 +630,6 @@
     "\n",
     "        macro_f1s.append(f1_score(yte, pred, average=\"macro\", labels=labels, zero_division=0))\n",
     "\n",
-    "        # major classes based on TRAIN only\n",
     "        major_classes = set(ytr.value_counts()[lambda s: s >= major_min_support].index.astype(int))\n",
     "        if major_classes:\n",
     "            major_labels = np.array(sorted(major_classes))\n",
@@ -627,7 +644,6 @@
     "        else:\n",
     "            major_f1s.append(np.nan)\n",
     "\n",
-    "        # fault vs normal\n",
     "        bin_f1s.append(\n",
     "            f1_score((yte != 0).astype(int), (pred != 0).astype(int), zero_division=0)\n",
     "        )\n",
@@ -735,7 +751,6 @@
     "# ============================================================\n",
     "# 11) Final holdout by WELL + CV on train only + repeated holdout\n",
     "# ============================================================\n",
-    "# One final holdout split (good for a clean \"final test\" demo)\n",
     "gss = GroupShuffleSplit(n_splits=1, test_size=0.2, random_state=RANDOM_STATE)\n",
     "tr_idx, ho_idx = next(gss.split(X, y, groups=groups))\n",
     "\n",
@@ -745,7 +760,6 @@
     "print(\"\\nTrain wells:\", g_tr.nunique(), \"| Holdout wells:\", g_ho.nunique())\n",
     "print(\"Holdout label counts:\\n\", y_ho.value_counts().sort_index())\n",
     "\n",
-    "# Robust n_splits selection (avoids StratifiedGroupKFold ValueError)\n",
     "n_splits = choose_stratified_group_n_splits(X_tr, y_tr, g_tr, max_splits=4, random_state=RANDOM_STATE)\n",
     "print(f\"\\nUsing StratifiedGroupKFold with n_splits={n_splits}\")\n",
     "\n",
@@ -769,7 +783,6 @@
     "print(\"LogReg:\", logreg_rep)\n",
     "print(\"HGB   :\", hgb_rep)\n",
     "\n",
-    "# Save results\n",
     "with open(f\"{OUT_DIR}/results_summary.json\", \"w\") as f:\n",
     "    json.dump({\n",
     "        \"features_version\": FEATURES_VERSION,\n",
@@ -788,7 +801,7 @@
     "                \"major classes computed from y_train per fold\",\n",
     "                \"fixed-label macro-F1 with zero_division=0\",\n",
     "                \"repeated group holdout metrics (mean/std)\",\n",
-    "                \"hybrid imputation (median for continuous, -1 for state-ish) + missing indicators\",\n",
+    "                \"hybrid imputation: median for continuous; prob->0; state-level->-1; + missing indicators\",\n",
     "                \"cache path versioned to avoid stale features\"\n",
     "            ]\n",
     "        }\n",
@@ -800,25 +813,25 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "4e1c32a9",
+   "id": "988e4952",
    "metadata": {
     "_cell_guid": "a7c6a5d1-8959-4210-8ad1-1a97420747f2",
     "_uuid": "d0ade4b7-7960-4103-9c19-458aa1cbc34f",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2026-01-04T13:19:34.819518Z",
-     "iopub.status.busy": "2026-01-04T13:19:34.819039Z",
-     "iopub.status.idle": "2026-01-04T13:19:34.871794Z",
-     "shell.execute_reply": "2026-01-04T13:19:34.870597Z"
+     "iopub.execute_input": "2026-01-04T16:42:20.496139Z",
+     "iopub.status.busy": "2026-01-04T16:42:20.495471Z",
+     "iopub.status.idle": "2026-01-04T16:42:20.532632Z",
+     "shell.execute_reply": "2026-01-04T16:42:20.530874Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.060549,
-     "end_time": "2026-01-04T13:19:34.874149",
+     "duration": 0.045425,
+     "end_time": "2026-01-04T16:42:20.535103",
      "exception": false,
-     "start_time": "2026-01-04T13:19:34.813600",
+     "start_time": "2026-01-04T16:42:20.489678",
      "status": "completed"
     },
     "tags": []
@@ -860,13 +873,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5f8c8c34",
+   "id": "2c7f2c7b",
    "metadata": {
     "papermill": {
-     "duration": 0.00393,
-     "end_time": "2026-01-04T13:19:34.882163",
+     "duration": 0.004183,
+     "end_time": "2026-01-04T16:42:20.543146",
      "exception": false,
-     "start_time": "2026-01-04T13:19:34.878233",
+     "start_time": "2026-01-04T16:42:20.538963",
      "status": "completed"
     },
     "tags": []
@@ -888,25 +901,25 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "81c9d5e0",
+   "id": "5a81cd78",
    "metadata": {
     "_cell_guid": "43dd3beb-1e81-4aa6-ae49-562ace3591fc",
     "_uuid": "b5ce1d34-f068-49cd-a840-6f1a42682c0c",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2026-01-04T13:19:34.891608Z",
-     "iopub.status.busy": "2026-01-04T13:19:34.891255Z",
-     "iopub.status.idle": "2026-01-04T13:19:36.511508Z",
-     "shell.execute_reply": "2026-01-04T13:19:36.510554Z"
+     "iopub.execute_input": "2026-01-04T16:42:20.552655Z",
+     "iopub.status.busy": "2026-01-04T16:42:20.552268Z",
+     "iopub.status.idle": "2026-01-04T16:42:22.893071Z",
+     "shell.execute_reply": "2026-01-04T16:42:22.892147Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 1.627617,
-     "end_time": "2026-01-04T13:19:36.513636",
+     "duration": 2.34828,
+     "end_time": "2026-01-04T16:42:22.895214",
      "exception": false,
-     "start_time": "2026-01-04T13:19:34.886019",
+     "start_time": "2026-01-04T16:42:20.546934",
      "status": "completed"
     },
     "tags": []
@@ -972,25 +985,25 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "d67bc136",
+   "id": "419c6420",
    "metadata": {
     "_cell_guid": "7d3f90e3-30d8-4693-be35-bc8c37ad4f94",
     "_uuid": "ccb30fdb-e518-4f00-a9a7-92d2839e785d",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2026-01-04T13:19:36.524473Z",
-     "iopub.status.busy": "2026-01-04T13:19:36.523881Z",
-     "iopub.status.idle": "2026-01-04T13:19:36.546125Z",
-     "shell.execute_reply": "2026-01-04T13:19:36.545039Z"
+     "iopub.execute_input": "2026-01-04T16:42:22.906707Z",
+     "iopub.status.busy": "2026-01-04T16:42:22.905580Z",
+     "iopub.status.idle": "2026-01-04T16:42:22.928272Z",
+     "shell.execute_reply": "2026-01-04T16:42:22.927270Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.030197,
-     "end_time": "2026-01-04T13:19:36.548222",
+     "duration": 0.030683,
+     "end_time": "2026-01-04T16:42:22.930080",
      "exception": false,
-     "start_time": "2026-01-04T13:19:36.518025",
+     "start_time": "2026-01-04T16:42:22.899397",
      "status": "completed"
     },
     "tags": []
@@ -1134,25 +1147,25 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "7a81bd32",
+   "id": "57eaf7c8",
    "metadata": {
     "_cell_guid": "5d497b20-eeb4-40ac-b462-9dca2ca076e3",
     "_uuid": "00df3321-d196-4aa5-b89b-ec6a55e7336b",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2026-01-04T13:19:36.559608Z",
-     "iopub.status.busy": "2026-01-04T13:19:36.558872Z",
-     "iopub.status.idle": "2026-01-04T13:21:34.568761Z",
-     "shell.execute_reply": "2026-01-04T13:21:34.567544Z"
+     "iopub.execute_input": "2026-01-04T16:42:22.940657Z",
+     "iopub.status.busy": "2026-01-04T16:42:22.939389Z",
+     "iopub.status.idle": "2026-01-04T16:44:23.042745Z",
+     "shell.execute_reply": "2026-01-04T16:44:23.041597Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 118.017875,
-     "end_time": "2026-01-04T13:21:34.571021",
+     "duration": 120.110671,
+     "end_time": "2026-01-04T16:44:23.044887",
      "exception": false,
-     "start_time": "2026-01-04T13:19:36.553146",
+     "start_time": "2026-01-04T16:42:22.934216",
      "status": "completed"
     },
     "tags": []
@@ -1161,7 +1174,7 @@
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "3469e4313d294ed4b4f4ce4dde8783ea",
+       "model_id": "d3364b257de5435494370090e588be38",
        "version_major": 2,
        "version_minor": 0
       },
@@ -1223,25 +1236,25 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "992371bb",
+   "id": "1eed8963",
    "metadata": {
     "_cell_guid": "a5e900d0-cb5b-4f37-8984-ac7e340f4dcf",
     "_uuid": "2bf22d68-f92b-4b74-b046-05686ad32cc8",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2026-01-04T13:21:34.582047Z",
-     "iopub.status.busy": "2026-01-04T13:21:34.581617Z",
-     "iopub.status.idle": "2026-01-04T13:21:34.623370Z",
-     "shell.execute_reply": "2026-01-04T13:21:34.622206Z"
+     "iopub.execute_input": "2026-01-04T16:44:23.055207Z",
+     "iopub.status.busy": "2026-01-04T16:44:23.054874Z",
+     "iopub.status.idle": "2026-01-04T16:44:23.095404Z",
+     "shell.execute_reply": "2026-01-04T16:44:23.094189Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.049892,
-     "end_time": "2026-01-04T13:21:34.625556",
+     "duration": 0.048512,
+     "end_time": "2026-01-04T16:44:23.097669",
      "exception": false,
-     "start_time": "2026-01-04T13:21:34.575664",
+     "start_time": "2026-01-04T16:44:23.049157",
      "status": "completed"
     },
     "tags": []
@@ -1301,13 +1314,13 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "d9bc1e8e",
+   "id": "a4c2ef33",
    "metadata": {
     "papermill": {
-     "duration": 0.004523,
-     "end_time": "2026-01-04T13:21:34.634877",
+     "duration": 0.004257,
+     "end_time": "2026-01-04T16:44:23.106344",
      "exception": false,
-     "start_time": "2026-01-04T13:21:34.630354",
+     "start_time": "2026-01-04T16:44:23.102087",
      "status": "completed"
     },
     "tags": []
@@ -1318,13 +1331,13 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "ed1eac51",
+   "id": "f5545abd",
    "metadata": {
     "papermill": {
-     "duration": 0.004518,
-     "end_time": "2026-01-04T13:21:34.643941",
+     "duration": 0.004152,
+     "end_time": "2026-01-04T16:44:23.114560",
      "exception": false,
-     "start_time": "2026-01-04T13:21:34.639423",
+     "start_time": "2026-01-04T16:44:23.110408",
      "status": "completed"
     },
     "tags": []
@@ -1335,19 +1348,19 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "783ff3f2",
+   "id": "95ffc3da",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-01-04T13:21:34.655787Z",
-     "iopub.status.busy": "2026-01-04T13:21:34.654614Z",
-     "iopub.status.idle": "2026-01-04T13:34:59.414737Z",
-     "shell.execute_reply": "2026-01-04T13:34:59.413654Z"
+     "iopub.execute_input": "2026-01-04T16:44:23.125183Z",
+     "iopub.status.busy": "2026-01-04T16:44:23.124507Z",
+     "iopub.status.idle": "2026-01-04T16:56:58.381151Z",
+     "shell.execute_reply": "2026-01-04T16:56:58.380136Z"
     },
     "papermill": {
-     "duration": 804.772365,
-     "end_time": "2026-01-04T13:34:59.420935",
+     "duration": 755.268275,
+     "end_time": "2026-01-04T16:56:58.387006",
      "exception": false,
-     "start_time": "2026-01-04T13:21:34.648570",
+     "start_time": "2026-01-04T16:44:23.118731",
      "status": "completed"
     },
     "tags": []
@@ -1432,13 +1445,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a7f01776",
+   "id": "e6b0f206",
    "metadata": {
     "papermill": {
-     "duration": 0.004675,
-     "end_time": "2026-01-04T13:34:59.430327",
+     "duration": 0.004493,
+     "end_time": "2026-01-04T16:56:58.395834",
      "exception": false,
-     "start_time": "2026-01-04T13:34:59.425652",
+     "start_time": "2026-01-04T16:56:58.391341",
      "status": "completed"
     },
     "tags": []
@@ -1486,46 +1499,20 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 2174.232624,
-   "end_time": "2026-01-04T13:35:00.056389",
+   "duration": 2103.842168,
+   "end_time": "2026-01-04T16:56:59.223201",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2026-01-04T12:58:45.823765",
+   "start_time": "2026-01-04T16:21:55.381033",
    "version": "2.6.0"
   },
   "widgets": {
    "application/vnd.jupyter.widget-state+json": {
     "state": {
-     "01fd461e4df340c3b4db50fe0f0e5275": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "FloatProgressModel",
-      "state": {
-       "_dom_classes": [],
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "FloatProgressModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/controls",
-       "_view_module_version": "2.0.0",
-       "_view_name": "ProgressView",
-       "bar_style": "success",
-       "description": "",
-       "description_allow_html": false,
-       "layout": "IPY_MODEL_b30342f0a2a144b7b9fcc4124ccdc566",
-       "max": 1119.0,
-       "min": 0.0,
-       "orientation": "horizontal",
-       "style": "IPY_MODEL_be697e0a05ec436489f315c08af9398e",
-       "tabbable": null,
-       "tooltip": null,
-       "value": 1119.0
-      }
-     },
-     "188b5b6420a84a46958d81c3018535d7": {
+     "077d4d7cb71843cc8c5d5cc76b293541": {
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "2.0.0",
       "model_name": "LayoutModel",
@@ -1578,60 +1565,7 @@
        "width": null
       }
      },
-     "19c3e5fac8a6401fa30b0968a6e09543": {
-      "model_module": "@jupyter-widgets/base",
-      "model_module_version": "2.0.0",
-      "model_name": "LayoutModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/base",
-       "_model_module_version": "2.0.0",
-       "_model_name": "LayoutModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "LayoutView",
-       "align_content": null,
-       "align_items": null,
-       "align_self": null,
-       "border_bottom": null,
-       "border_left": null,
-       "border_right": null,
-       "border_top": null,
-       "bottom": null,
-       "display": null,
-       "flex": null,
-       "flex_flow": null,
-       "grid_area": null,
-       "grid_auto_columns": null,
-       "grid_auto_flow": null,
-       "grid_auto_rows": null,
-       "grid_column": null,
-       "grid_gap": null,
-       "grid_row": null,
-       "grid_template_areas": null,
-       "grid_template_columns": null,
-       "grid_template_rows": null,
-       "height": null,
-       "justify_content": null,
-       "justify_items": null,
-       "left": null,
-       "margin": null,
-       "max_height": null,
-       "max_width": null,
-       "min_height": null,
-       "min_width": null,
-       "object_fit": null,
-       "object_position": null,
-       "order": null,
-       "overflow": null,
-       "padding": null,
-       "right": null,
-       "top": null,
-       "visibility": null,
-       "width": null
-      }
-     },
-     "1e665ac373dc42289d72e1835de6a256": {
+     "0a988451e9a0412e935b1ea1135050e1": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "ProgressStyleModel",
@@ -1647,53 +1581,7 @@
        "description_width": ""
       }
      },
-     "1ecbf35b57cf49e5839bfa6ec9b3bd8d": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "HTMLModel",
-      "state": {
-       "_dom_classes": [],
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "HTMLModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/controls",
-       "_view_module_version": "2.0.0",
-       "_view_name": "HTMLView",
-       "description": "",
-       "description_allow_html": false,
-       "layout": "IPY_MODEL_fb069eaa2ea14af8b096552bf36b58b7",
-       "placeholder": "​",
-       "style": "IPY_MODEL_aeb41d2a562047ceb82ddd8b5e488099",
-       "tabbable": null,
-       "tooltip": null,
-       "value": " 1119/1119 [01:57&lt;00:00,  6.34it/s]"
-      }
-     },
-     "279c485d9f1d4bb7b88c172cf5ca7054": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "HTMLModel",
-      "state": {
-       "_dom_classes": [],
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "HTMLModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/controls",
-       "_view_module_version": "2.0.0",
-       "_view_name": "HTMLView",
-       "description": "",
-       "description_allow_html": false,
-       "layout": "IPY_MODEL_4f9bc1c8c1c44159b56886e4fc255820",
-       "placeholder": "​",
-       "style": "IPY_MODEL_2e9a91ce41644b59ab464b6d1f755021",
-       "tabbable": null,
-       "tooltip": null,
-       "value": " 1119/1119 [02:18&lt;00:00,  6.19it/s]"
-      }
-     },
-     "2dc2aa5f9f6547b89fad1b6913fce32f": {
+     "29da62500fae45feb20de0f4fc60370f": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "HTMLStyleModel",
@@ -1711,7 +1599,7 @@
        "text_color": null
       }
      },
-     "2e9a91ce41644b59ab464b6d1f755021": {
+     "3e0428aa50854c64998c92bdfcf47505": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "HTMLStyleModel",
@@ -1729,31 +1617,7 @@
        "text_color": null
       }
      },
-     "3469e4313d294ed4b4f4ce4dde8783ea": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "HBoxModel",
-      "state": {
-       "_dom_classes": [],
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "HBoxModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/controls",
-       "_view_module_version": "2.0.0",
-       "_view_name": "HBoxView",
-       "box_style": "",
-       "children": [
-        "IPY_MODEL_b540b148a01f45cfb39bf3bb88be0fd9",
-        "IPY_MODEL_b9f32f73174e46d6b109291c4392a49f",
-        "IPY_MODEL_1ecbf35b57cf49e5839bfa6ec9b3bd8d"
-       ],
-       "layout": "IPY_MODEL_188b5b6420a84a46958d81c3018535d7",
-       "tabbable": null,
-       "tooltip": null
-      }
-     },
-     "4805d051ba0b4a0bafadcfcf24cfa3f5": {
+     "3e40666e288d4d2dab7844333d3c30cf": {
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "2.0.0",
       "model_name": "LayoutModel",
@@ -1806,7 +1670,7 @@
        "width": null
       }
      },
-     "49be11de9e6a459f851fb2394404ed4c": {
+     "593251a6541a4dadb14e2fa15612f534": {
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "2.0.0",
       "model_name": "LayoutModel",
@@ -1859,131 +1723,7 @@
        "width": null
       }
      },
-     "4f9bc1c8c1c44159b56886e4fc255820": {
-      "model_module": "@jupyter-widgets/base",
-      "model_module_version": "2.0.0",
-      "model_name": "LayoutModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/base",
-       "_model_module_version": "2.0.0",
-       "_model_name": "LayoutModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "LayoutView",
-       "align_content": null,
-       "align_items": null,
-       "align_self": null,
-       "border_bottom": null,
-       "border_left": null,
-       "border_right": null,
-       "border_top": null,
-       "bottom": null,
-       "display": null,
-       "flex": null,
-       "flex_flow": null,
-       "grid_area": null,
-       "grid_auto_columns": null,
-       "grid_auto_flow": null,
-       "grid_auto_rows": null,
-       "grid_column": null,
-       "grid_gap": null,
-       "grid_row": null,
-       "grid_template_areas": null,
-       "grid_template_columns": null,
-       "grid_template_rows": null,
-       "height": null,
-       "justify_content": null,
-       "justify_items": null,
-       "left": null,
-       "margin": null,
-       "max_height": null,
-       "max_width": null,
-       "min_height": null,
-       "min_width": null,
-       "object_fit": null,
-       "object_position": null,
-       "order": null,
-       "overflow": null,
-       "padding": null,
-       "right": null,
-       "top": null,
-       "visibility": null,
-       "width": null
-      }
-     },
-     "7bb93292d2ab464aab0cbbc33ae521f8": {
-      "model_module": "@jupyter-widgets/base",
-      "model_module_version": "2.0.0",
-      "model_name": "LayoutModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/base",
-       "_model_module_version": "2.0.0",
-       "_model_name": "LayoutModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "LayoutView",
-       "align_content": null,
-       "align_items": null,
-       "align_self": null,
-       "border_bottom": null,
-       "border_left": null,
-       "border_right": null,
-       "border_top": null,
-       "bottom": null,
-       "display": null,
-       "flex": null,
-       "flex_flow": null,
-       "grid_area": null,
-       "grid_auto_columns": null,
-       "grid_auto_flow": null,
-       "grid_auto_rows": null,
-       "grid_column": null,
-       "grid_gap": null,
-       "grid_row": null,
-       "grid_template_areas": null,
-       "grid_template_columns": null,
-       "grid_template_rows": null,
-       "height": null,
-       "justify_content": null,
-       "justify_items": null,
-       "left": null,
-       "margin": null,
-       "max_height": null,
-       "max_width": null,
-       "min_height": null,
-       "min_width": null,
-       "object_fit": null,
-       "object_position": null,
-       "order": null,
-       "overflow": null,
-       "padding": null,
-       "right": null,
-       "top": null,
-       "visibility": null,
-       "width": null
-      }
-     },
-     "83596a1369e9416089f673d2a47284bf": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "HTMLStyleModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "HTMLStyleModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "StyleView",
-       "background": null,
-       "description_width": "",
-       "font_size": null,
-       "text_color": null
-      }
-     },
-     "acc58cd1930440b195406c3b13b105f7": {
+     "66968d6255b1411cb56bfab79f61a88c": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "HTMLModel",
@@ -1998,33 +1738,15 @@
        "_view_name": "HTMLView",
        "description": "",
        "description_allow_html": false,
-       "layout": "IPY_MODEL_49be11de9e6a459f851fb2394404ed4c",
+       "layout": "IPY_MODEL_f75a47b93d54442fad7645e1fe88a654",
        "placeholder": "​",
-       "style": "IPY_MODEL_2dc2aa5f9f6547b89fad1b6913fce32f",
+       "style": "IPY_MODEL_29da62500fae45feb20de0f4fc60370f",
        "tabbable": null,
        "tooltip": null,
        "value": "Building WELL dataset: 100%"
       }
      },
-     "aeb41d2a562047ceb82ddd8b5e488099": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "HTMLStyleModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "HTMLStyleModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "StyleView",
-       "background": null,
-       "description_width": "",
-       "font_size": null,
-       "text_color": null
-      }
-     },
-     "b30342f0a2a144b7b9fcc4124ccdc566": {
+     "6d5f6514289e46138fc65298eeeefe3f": {
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "2.0.0",
       "model_name": "LayoutModel",
@@ -2077,7 +1799,7 @@
        "width": null
       }
      },
-     "b540b148a01f45cfb39bf3bb88be0fd9": {
+     "7010015bccfd45178516623b6b9bfedf": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "HTMLModel",
@@ -2092,15 +1814,15 @@
        "_view_name": "HTMLView",
        "description": "",
        "description_allow_html": false,
-       "layout": "IPY_MODEL_7bb93292d2ab464aab0cbbc33ae521f8",
+       "layout": "IPY_MODEL_077d4d7cb71843cc8c5d5cc76b293541",
        "placeholder": "​",
-       "style": "IPY_MODEL_83596a1369e9416089f673d2a47284bf",
+       "style": "IPY_MODEL_c2eb010185ca49c99929bcfc94e48316",
        "tabbable": null,
        "tooltip": null,
        "value": "Building WELL dataset: 100%"
       }
      },
-     "b9f32f73174e46d6b109291c4392a49f": {
+     "70599e94c63543dca8b2d81c594bf3e0": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "FloatProgressModel",
@@ -2116,17 +1838,17 @@
        "bar_style": "success",
        "description": "",
        "description_allow_html": false,
-       "layout": "IPY_MODEL_4805d051ba0b4a0bafadcfcf24cfa3f5",
+       "layout": "IPY_MODEL_593251a6541a4dadb14e2fa15612f534",
        "max": 1119.0,
        "min": 0.0,
        "orientation": "horizontal",
-       "style": "IPY_MODEL_1e665ac373dc42289d72e1835de6a256",
+       "style": "IPY_MODEL_8b03be88bcd64d2dacd2df0ccd021cd8",
        "tabbable": null,
        "tooltip": null,
        "value": 1119.0
       }
      },
-     "be697e0a05ec436489f315c08af9398e": {
+     "8b03be88bcd64d2dacd2df0ccd021cd8": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "ProgressStyleModel",
@@ -2142,7 +1864,248 @@
        "description_width": ""
       }
      },
-     "d477d70aec274c76805009b9e7878336": {
+     "8d4cd19f8d9a4ac48e146a27ea302d61": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
+      }
+     },
+     "91bd0e7a914a48118a916c09d98e162a": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "HTMLView",
+       "description": "",
+       "description_allow_html": false,
+       "layout": "IPY_MODEL_6d5f6514289e46138fc65298eeeefe3f",
+       "placeholder": "​",
+       "style": "IPY_MODEL_b4f21312c3a44812b1dbb87636475941",
+       "tabbable": null,
+       "tooltip": null,
+       "value": " 1119/1119 [01:59&lt;00:00,  7.26it/s]"
+      }
+     },
+     "a871424da9a845c58bf90bd96af17d92": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
+      }
+     },
+     "a90de274befd4875b1e635767db0fab8": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
+      }
+     },
+     "a96c8d1720304377911cd7814b1a0131": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "HTMLView",
+       "description": "",
+       "description_allow_html": false,
+       "layout": "IPY_MODEL_a90de274befd4875b1e635767db0fab8",
+       "placeholder": "​",
+       "style": "IPY_MODEL_3e0428aa50854c64998c92bdfcf47505",
+       "tabbable": null,
+       "tooltip": null,
+       "value": " 1119/1119 [02:23&lt;00:00,  6.12it/s]"
+      }
+     },
+     "b4f21312c3a44812b1dbb87636475941": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLStyleModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLStyleModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "StyleView",
+       "background": null,
+       "description_width": "",
+       "font_size": null,
+       "text_color": null
+      }
+     },
+     "c2eb010185ca49c99929bcfc94e48316": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLStyleModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLStyleModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "StyleView",
+       "background": null,
+       "description_width": "",
+       "font_size": null,
+       "text_color": null
+      }
+     },
+     "d0125ac6fb7e4e7885e8f2098b79bdb8": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "HBoxModel",
@@ -2157,16 +2120,66 @@
        "_view_name": "HBoxView",
        "box_style": "",
        "children": [
-        "IPY_MODEL_acc58cd1930440b195406c3b13b105f7",
-        "IPY_MODEL_01fd461e4df340c3b4db50fe0f0e5275",
-        "IPY_MODEL_279c485d9f1d4bb7b88c172cf5ca7054"
+        "IPY_MODEL_7010015bccfd45178516623b6b9bfedf",
+        "IPY_MODEL_e26e39526ad3402e978553af38dc3b60",
+        "IPY_MODEL_a96c8d1720304377911cd7814b1a0131"
        ],
-       "layout": "IPY_MODEL_19c3e5fac8a6401fa30b0968a6e09543",
+       "layout": "IPY_MODEL_a871424da9a845c58bf90bd96af17d92",
        "tabbable": null,
        "tooltip": null
       }
      },
-     "fb069eaa2ea14af8b096552bf36b58b7": {
+     "d3364b257de5435494370090e588be38": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HBoxModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HBoxModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "HBoxView",
+       "box_style": "",
+       "children": [
+        "IPY_MODEL_66968d6255b1411cb56bfab79f61a88c",
+        "IPY_MODEL_70599e94c63543dca8b2d81c594bf3e0",
+        "IPY_MODEL_91bd0e7a914a48118a916c09d98e162a"
+       ],
+       "layout": "IPY_MODEL_8d4cd19f8d9a4ac48e146a27ea302d61",
+       "tabbable": null,
+       "tooltip": null
+      }
+     },
+     "e26e39526ad3402e978553af38dc3b60": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "FloatProgressModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "FloatProgressModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "ProgressView",
+       "bar_style": "success",
+       "description": "",
+       "description_allow_html": false,
+       "layout": "IPY_MODEL_3e40666e288d4d2dab7844333d3c30cf",
+       "max": 1119.0,
+       "min": 0.0,
+       "orientation": "horizontal",
+       "style": "IPY_MODEL_0a988451e9a0412e935b1ea1135050e1",
+       "tabbable": null,
+       "tooltip": null,
+       "value": 1119.0
+      }
+     },
+     "f75a47b93d54442fad7645e1fe88a654": {
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "2.0.0",
       "model_name": "LayoutModel",
